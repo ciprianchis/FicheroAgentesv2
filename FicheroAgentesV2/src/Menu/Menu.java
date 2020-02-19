@@ -4,14 +4,10 @@ import java.util.Scanner;
 
 public class Menu {
 	
-	public int mostrarMenu(){
+	public static int mostrarMenu(){
 		Scanner leer= new Scanner(System.in);
 		int opcion = 0;
 		
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
-		System.out.println("");
 		System.out.println("::::::::::::::::::::::::: MENU :::::::::::::::::::::::::");
 		System.out.println(": 1- Ver todos los agentes con su información          :");
 		System.out.println(": 2- Ver los agentes que ganen más de una cantidad X   :");
@@ -34,9 +30,7 @@ public class Menu {
 			System.err.println("OPCIÓN DESCONOCIDA");
 		}
 		
-		
-		
-		
+
 		return opcion;
 	}
 }

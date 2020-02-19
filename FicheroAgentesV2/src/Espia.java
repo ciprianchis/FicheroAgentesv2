@@ -19,8 +19,7 @@ public final class Espia extends Agente{
 	}
 
 	public String toString() {
-		return "ESPIA" + "\n" + "Pisos: "
-				+ (vPisos != null ? Arrays.asList(vPisos) : null) + "]";
+		return "ESPIA" + "\n" + super.toString();
 	}
 
 	
