@@ -194,7 +194,7 @@ public class ioDatos {
 	}
 	
 	
-	public void desencriptarDatosAgentes() {
+	public Agente[] desencriptarDatosAgentes() {
 		File agentes = new File("datos/agentes.dat");
 		FileInputStream fi;
 		ObjectInputStream leer = null;
@@ -238,6 +238,7 @@ public class ioDatos {
 				e.printStackTrace();
 			}
 		}
+		return vAgentes;
 
 	}
 	

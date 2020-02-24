@@ -15,11 +15,12 @@ public class Principal {
 	public static void main(String[] args) {
 		Scanner leer = new Scanner(System.in);
 		int opc = 0;
-		
+		double salario = 0;
 		
 		Piso[] vPisos = new Piso[50];
 		Arma[] vArmas = new Arma[50];
 		Agente[] vAgentes = new Agente[50];
+		Agente[] vAgenteBusqueda = new Agente[50];
 		
 		ioDatos datos = new ioDatos();
 		//Menu menu = new Menu();
@@ -33,9 +34,30 @@ public class Principal {
 
 			case 1://Ver todos los agentes con su información
 
+				vAgenteBusqueda = datos.desencriptarDatosAgentes();
+				
+				for (Agente agente : vAgenteBusqueda) {
+					if (agente!=null) {
+						agente.toString();
+						
+					}
+				}
+				
 				break;
 			case 2://Ver los agentes que ganen más de una cantidad X
 
+				System.out.println("BUSCAR POR SALARIO MAYOR A:");
+				salario = leer.nextDouble();
+				
+				
+				for (Agente agente : vAgenteBusqueda) {
+					if (agente!=null) {
+						if (agente.getSalario()>salario) {
+							agente.toString();
+						}
+					}
+				}
+				
 				break;
 			case 3://DAR DE ALTA UN NUEVO PISO
 				piso.nuevoPiso();
